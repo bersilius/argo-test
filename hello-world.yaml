@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
-namespace: default
 metadata:
   generateName: workflow-template-hello-world-
+  namespace: default
 spec:
   entrypoint: whalesay
   templates:
