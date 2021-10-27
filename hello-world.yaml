@@ -5,6 +5,8 @@ metadata:
   namespace: default
 spec:
   entrypoint: whalesay
+  templateDefaults:
+    timeout: 120s
   templates:
   - name: whalesay
     steps:
