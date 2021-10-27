@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: workflow-template-whalesay-template
+  namespace: default
 spec:
   entrypoint: whalesay-template
   templates:
@@ -18,6 +19,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: workflow-template-random-fail-template
+  namespace: default
 spec:
   templates:
   - name: random-fail-template
@@ -33,6 +35,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: workflow-template-inner-steps
+  namespace: default
 spec:
   templates:
   - name: whalesay-template
@@ -79,6 +82,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: workflow-template-inner-dag
+  namespace: default
 spec:
   templates:
   - name: whalesay-template
@@ -128,6 +132,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: workflow-template-submittable
+  namespace: default
 spec:
   entrypoint: whalesay-template
   arguments:
