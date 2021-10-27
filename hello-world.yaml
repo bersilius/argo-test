@@ -4,6 +4,7 @@ metadata:
   name: workflow-template-hello-world
   namespace: default
 spec:
+  serviceAccountName: workflow
   entrypoint: whalesay
   templateDefaults:
     timeout: 120s
